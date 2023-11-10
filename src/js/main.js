@@ -1,30 +1,20 @@
 import { loadHeaderFooter } from "./utils.mjs";
-import { fetchHeroes } from "./hero-api";
 
 loadHeaderFooter();
 
-document.addEventListener("DOMContentLoaded", () => {
-  const searchForm = document.getElementById("searchForm");
-  //   const superheroesList = document.getElementById("superheroesList");
+const fetchHeroes = async (name) => {
+  let apiUrl = `https://superheroapi.com/api/6252879131479253/search/${name}`;
 
-  searchForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
+  try {
+    const res = await fetch(apiUrl);
+    const data = await res.json();
+    console.log(data);
+    const heroes = data.results;
+    console.log("heroes", heroes);
+    return heroes;
+  } catch (err) {
+    console.log(err);
+  }
+};
 
-    const searchInput = document.getElementById("searchInput").value.trim();
-
-    if (searchInput === "") {
-      alert("Please enter a superhero name");
-      return;
-    }
-
-    try {
-      // Fetch superhero data from the API
-      const superheroData = await fetchHeroes(searchInput);
-
-      // Display the list of superheroes
-      displaySuperheroes(superheroData);
-    } catch (error) {
-      console.error("Error fetching superhero data:", error);
-    }
-  });
-});
+fetchHeroes("batman");

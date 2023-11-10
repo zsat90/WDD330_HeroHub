@@ -51,27 +51,27 @@ export async function loadHeaderFooter() {
   await renderWithTemplate(footerTemplateFn, footerElement);
 }
 
-const displaySuperheroes = (heroes) => {
-  superheroesList.innerHTML = "";
+// const displaySuperheroes = (heroes) => {
+//   superheroesList.innerHTML = "";
 
-  heroes.forEach((hero) => {
-    const superheroCard = createSuperheroCard(hero);
-    superheroesList.appendChild(superheroCard);
-  });
-};
+//   heroes.forEach((hero) => {
+//     const superheroCard = createSuperheroCard(hero);
+//     superheroesList.appendChild(superheroCard);
+//   });
+// };
 
-const createSuperheroCard = (hero) => {
-  const card = document.createElement("div");
-  card.classList.add("superhero-card");
+// const createSuperheroCard = (hero) => {
+//   const card = document.createElement("div");
+//   card.classList.add("superhero-card");
 
-  card.innerHTML = `
-        <img src="${hero.image.url}" alt="${hero.name}">
-        <h3>${hero.name}</h3>
-        <p>Powerstats: ${JSON.stringify(hero.powerstats)}</p>
-        <button class="view-details" data-id="${hero.id}">View Details</button>
-    `;
+//   card.innerHTML = `
+//         <img src="${hero.image.url}" alt="${hero.name}">
+//         <h3>${hero.name}</h3>
+//         <p>Powerstats: ${JSON.stringify(hero.powerstats)}</p>
+//         <button class="view-details" data-id="${hero.id}">View Details</button>
+//     `;
 
-  card.querySelector(".view-details").addEventListener("click", () => {
-    console.log("View Details");
-  });
-};
+//   card.querySelector(".view-details").addEventListener("click", () => {
+//     console.log("View Details");
+//   });
+// };
