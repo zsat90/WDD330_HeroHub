@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+  }
+
+.img-container{
+    background-color: #C0C0C0  ; /* Set your desired background color here */
+    width: 100vw;
+    height: 41vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image{
+    width: 100vw;
+    height: 40vh;
+}
+
