@@ -6,7 +6,14 @@ const fetchHeroes = async (name) => {
   let apiUrl = `https://superheroapi.com/api/6252879131479253/search/${name}`;
 
   try {
-    const res = await fetch(apiUrl);
+    const res = await fetch(apiUrl, {
+      method: "POST",
+      mode: "cors",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     const data = await res.json();
     console.log(data);
     const heroes = data.results;
