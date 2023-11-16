@@ -1,23 +1,13 @@
-// require("dotenv").config();
-// const baseURL = process.env.BASE_URL;
+export const fetchHeroes = async (name) => {
+  const apiUrl = `http://localhost:3000/api/heroes/${name}`;
 
-// const convertToJson = async (res) => {
-//   const message = await res.json();
-//   if (res.ok) {
-//     return message;
-//   } else {
-//     throw { name: "servicesError", message: message };
-//   }
-// };
-
-// export const fetchHeroes = async (name) => {
-//   const apiURL = `${baseURL}/search/${name}`;
-//   try {
-//     const res = await fetch(apiURL);
-//     const data = await convertToJson(res);
-//     console.log(data);
-//     return data.results;
-//   } catch (err) {
-//     console.error("Error Fetching Hero");
-//   }
-// };
+  try {
+    const res = await fetch(apiUrl);
+    const data = await res.json();
+    console.log(data);
+    const heroes = data.results;
+    return heroes;
+  } catch (err) {
+    console.log(err);
+  }
+};

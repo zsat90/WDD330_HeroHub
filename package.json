@@ -2,9 +2,10 @@
   "name": "wdd330_herohub",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/js/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/js/server.js"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
-    "live-server": "^1.1.0"
+    "express": "^4.18.2",
+    "live-server": "^1.1.0",
+    "nodemon": "^3.0.1"
   }
 }
