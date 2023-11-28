@@ -6,7 +6,7 @@ let search = document.getElementById("search");
 const ul = document.getElementById("auto-complete");
 
 let hero = [];
-let favarray = [];
+let favarray = JSON.parse(localStorage.getItem("favlistarr")) || [];
 var heroid = 0;
 var favid = 0;
 
@@ -46,11 +46,13 @@ search.onkeyup = function () {
 
 // displaying the hero details on screen
 function loadDetails(heroid) {
+  var detailsContainer = document.getElementById("details-container");
+
   fetch(`https://superheroapi.com/api.php/6252879131479253/${heroid}`)
     .then((response) => response.json())
     .then((data) => {
-      var details = document.getElementById("details");
-      details.setAttribute("style", "background-color:rgba(0,0,0,0.8);");
+      // Show details container as a flex container
+      detailsContainer.style.display = "flex";
 
       var img = document.getElementById("img");
       img.setAttribute("src", data.image.url);
@@ -103,6 +105,6 @@ function favpush(favid) {
 
 document.getElementById("favbtn").addEventListener("click", () => {
   const value = document.getElementById("favbtn").value;
-
+  alert("Added to favorites!");
   favpush(value);
 });

@@ -1,18 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+
 * {
-    /* background-color: black; */
     box-sizing: border-box;
+    font-family: 'Bangers', sans-serif;
+    color: #FF0000;
   }
 
-.img-container{
-    background-color: #C0C0C0  ; /* Set your desired background color here */
-    width: 100vw;
-    height: 41vh;
+body{
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url('../public//images//marvel-vs-dc-4k-iu.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    letter-spacing: 2px;
 }
 
-.hero-image{
-    width: 100vw;
-    height: 40vh;
+#favorites-body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url('../public//images/zap.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  letter-spacing: 2px;
 }
+
+.intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+.intro h1, p{
+    color: #FF0000;
+}
+  
+  #search {
+    width: 100%;
+    height: 3em;
+    box-sizing: border-box;
+    max-width: 600px;
+    margin: 20px auto;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo a{
+    font-size: 4em;
+    text-decoration: none;
+    color: #FF0000;
+}
+.favorite-container{
+    display: flex;
+    justify-content: flex-end;
+
+}
+.favorite-link{
+    list-style: none;
+    font-size: 1.5em;
+}
+.favorite-link a{
+    text-decoration: none;
+    color: #FF0000;
+}
+#fav{
+    padding-top: 20px;
+}
+  
+  #favbtn {
+    background-color: #0000FF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    float: right;
+  }
+  
+  #favbtn:hover {
+    background-color: #FFD700;
+  }
+
+  
+#details-container {
+    display: none;
+    max-width: 900px;
+    background-color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    overflow: hidden;
+    justify-content: center;
+    align-self: center;
+  }
+  
+  .img {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .details {
+    flex: 2;
+    padding: 20px;
+    font-size: 1.2em;
+  }
+  
+  .details h3 {
+    margin: 0;
+  }
+  
+  hr {
+    border: 0;
+    border-top: 1px solid #C0C0C0;
+    margin: 10px 0;
+  }
+  
+  #work,
+  #bio,
+  #good,
+  #powerstats {
+    margin-bottom: 10px;
+  }
+  
+  #fav {
+    text-align: center;
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-success:hover {
+    background-color: #218838;
+  }
+
+  #auto-complete{
+    list-style: none;
+    
+  }
+ 
+  #auto-complete li:hover {
+    cursor: pointer;
+    background-color: #C0C0C0;
+    width: 20%;
+  }
+
+  #outerbox {
+    border-radius: 8px;
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    width: 550px;
+    background-color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #innerbox {
+    margin-right: 10px;
+  }
+  
+  #favlistimg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  h5 {
+    margin: 0;
+    font-size: 1em;
+  }
+  
+  button {
+    margin-top: auto; 
+    display: block;
+    margin-left: auto;
+    font-size: 1.2em;
+  }
+
+  #main-footer{
+    background-color: #C0C0C0 ;
+    color: black;
+    text-align: center;
+    margin-top: auto;
+    padding: 10px;
+  }
+  
