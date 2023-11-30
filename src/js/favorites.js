@@ -38,11 +38,10 @@ function herolistdis(hero) {
     <h5>${hero.name}</h5>
     <hr>
     <div>
-      <p>Relatives: ${hero.connections.relatives}</p>
-      <p>Nature: ${hero.biography.alignment}</p>
-      <p>Work: ${hero.work.base}</p>
-      <p>Occupation: ${hero.work.occupation}</p>
-      <p>Powerstats: Intelligence - ${hero.powerstats.intelligence}, Combat - ${hero.powerstats.combat}, Power - ${hero.powerstats.power}, Speed - ${hero.powerstats.speed}, Strength - ${hero.powerstats.strength}</p>
+      <p>First Appearance: ${hero.biography["first-appearance"]}
+      <p>Place Of Birth: ${hero.biography["place-of-birth"]}
+      <p>Group: ${hero.connections["group-affiliation"]}
+      <p>Powerstats- Intelligence: ${hero.powerstats.intelligence}, Combat: ${hero.powerstats.combat}, Power: ${hero.powerstats.power}, Speed: ${hero.powerstats.speed}, Strength: ${hero.powerstats.strength}</p>
     </div>
     <hr>
     <button class="btn btn-primary" id="remove" type="submit" value=${hero.id}>Remove</button>

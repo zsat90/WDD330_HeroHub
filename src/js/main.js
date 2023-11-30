@@ -51,6 +51,7 @@ function loadDetails(heroid) {
   fetch(`https://superheroapi.com/api.php/6252879131479253/${heroid}`)
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       // Show details container as a flex container
       detailsContainer.style.display = "flex";
 
@@ -60,29 +61,37 @@ function loadDetails(heroid) {
       var name = document.getElementById("name");
       name.innerHTML = data.name;
 
-      var bio = document.getElementById("bio");
-      bio.innerHTML = " Relatives :" + data.connections.relatives;
+      var placeOfBirth = document.getElementById("place-of-birth");
+      placeOfBirth.innerHTML =
+        "Place of Birth: " + data.biography["place-of-birth"];
+
+      var firstAppearance = document.getElementById("first-appearance");
+      firstAppearance.innerHTML =
+        "First Appearance: " + data.biography["first-appearance"];
 
       var good = document.getElementById("good");
-      good.innerText = "Nature :" + data.biography.alignment;
+      good.innerHTML = "Nature: " + data.biography.alignment;
+
+      var group = document.getElementById("group");
+      group.innerHTML = "Group: " + data.connections["group-affiliation"];
 
       var base = document.getElementById("base");
-      base.innerHTML = "Work :" + data.work.base;
+      base.innerHTML = "Work: " + data.work.base;
 
       var occ = document.getElementById("occupation");
-      occ.innerHTML = "Occupation :" + data.work.occupation;
+      occ.innerHTML = "Occupation: " + data.work.occupation;
 
       var powestat = document.getElementById("powerstats");
       powestat.innerHTML =
-        "Intelligence : " +
+        "Intelligence: " +
         data.powerstats.intelligence +
-        ", Combat : " +
+        ", Combat: " +
         data.powerstats.combat +
-        ", Power : " +
+        ", Power: " +
         data.powerstats.power +
-        ", Speed : " +
+        ", Speed: " +
         data.powerstats.speed +
-        ", Strength : " +
+        ", Strength: " +
         data.powerstats.strength;
 
       var favv = document.getElementById("favbtn");
