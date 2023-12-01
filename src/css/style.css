@@ -13,7 +13,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: url('/src/public/images/marvel-vs-dc-4k-iu.jpg') no-repeat center center fixed;
+    background: url('../public/images/marvel-vs-dc-4k-iu.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
     letter-spacing: 2px;
