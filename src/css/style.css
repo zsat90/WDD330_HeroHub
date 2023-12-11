@@ -35,12 +35,12 @@ body{
 
 @media only screen and (max-width: 768px) {
   body {
-    background: url('../public/images/mobile-background.jpg') no-repeat center center fixed;
+    background: url('../public/images/marvel-vs-dc-4k-iu.jpg') no-repeat center center fixed;
     background-size: cover;
   }
 
   #favorites-body {
-    background: url('../public/images/mobile-fav-background.jpg') no-repeat center center fixed;
+    background: url('../public/images/zap.jpg') no-repeat center center fixed;
     background-size: cover;
   }
 
@@ -61,23 +61,29 @@ body{
   }
 
   #details-container {
-    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .img img {
-    height: auto;
+  .img {
+    order: 2;
+    padding: 20px 0;
   }
 
   .details {
+    order: 1;
+    flex: 1;
+    padding: 20px;
     font-size: 1em;
   }
 
-  #auto-complete li {
-    font-size: 1em;
+  .details h3 {
+    font-size: 1.2em;
   }
 
   #favlistitem {
-    width: 100%;
+    justify-content: center;
   }
 
   #outerbox {
@@ -92,6 +98,12 @@ body{
     font-size: 1em;
   }
 
+  #favlistimg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
   #remove {
     font-size: 1.2em;
   }
@@ -103,6 +115,8 @@ body{
   button {
     font-size: 1em;
   }
+
+
 }
 
 
